@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danz Hosting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      color: #f1f5f9;
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+    }
+    video#bgvid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.35;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #cbd5e1;
+    }
+    .catalog-button {
+      display: block;
+      width: fit-content;
+      margin: 1.5rem auto;
+      padding: 0.75rem 1.5rem;
+      background-color: #10b981;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .search-container {
+      margin: 1.5rem;
+      text-align: center;
+    }
+    .search-container input {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin: 1rem;
+    }
+    .filters a {
+      background: rgba(30, 41, 59, 0.8);
+      padding: 0.5rem 1rem;
+      color: white;
+      border-radius: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .filters a:hover,
+    .filters a.active {
+      background: #10b981;
+    }
+    .section-title {
+      text-align: center;
+      margin: 2rem 0 1rem;
+      font-weight: 800;
+      font-size: 1.5rem;
+      background: rgba(0,0,0,0.4);
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 0 1.5rem 2rem;
+    }
+    .product {
+      background: rgba(30, 41, 59, 0.8);
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+    .product img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .product h3 {
+      font-size: 1rem;
+      margin: 1rem 0;
+    }
+    .contact {
+      text-align: center;
+      margin: 2rem;
+    }
+    .contact a {
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bgvid">
+    <source src="https://files.catbox.moe/nvxg3u.mp4" type="video/mp4">
+  </video>
+
+  <header>
+    <h1>Danz Hosting</h1>
+    <p>Jelajahi koleksi Hosting, Source code, dan layanan SMM terbaik.</p>
+    <a href="" class="catalog-button">LOGIN BERHASIL 🔐</a>
+      <a href="index.html" class="catalog-button">Log Out</a>
+  </header>
+
+  <div class="search-container">
+    <input type="text" placeholder="Cari VPS, Hosting, Script..." />
+  </div>
+
+  <div class="filters">
+    <a href="index2.html" class="active">Home</a>
+    <a href="hosting2.html">Hosting</a>
+    <a href="panel2.html">Panel & Vps</a>
+    <a href="source-code2.html">Source code</a>
+  </div>
+
+  <div id="katalog" class="section-title">INFORMATION DANZ CLOUD</div>
+  <section class="products">
+    <div class="product">
+     
+      <h3>NOMOR : 6287722877327</h3>
+    </div>
+    <div class="product">
+     
+      <h3>OPEN VPS | HOSTING SERVER | SOURCE CODE</h3>
+    </div>
+    <div class="product">
+     
+      <h3>ADA BUG? HUBUNGI OWNER!!</h3>
+    </div>
+    <div class="product">
+    
+      <h3>DANZ STORE ALL ALAMAH</h3>
+    </div>
+  </section>
+
+  <div class="contact">
+    <a href="https://wa.me/6287722877327" target="_blank">Hubungi via WhatsApp</a>
+  </div>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="halaman-lain2.html" style="display: inline-block; background-color: #FFA500; color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: bold;">
+      Buka Halaman Lain
+    </a>
+  </div>
+</body>
+</html>

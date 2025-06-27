@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar Akun</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    form {
+      background: rgba(30, 41, 59, 0.8);
+      padding: 2rem;
+      border-radius: 10px;
+      width: 300px;
+    }
+    input {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      width: 100%;
+      padding: 0.5rem;
+      background-color: #10b981;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .message {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <form id="registerForm">
+    <h2>Daftar Akun</h2>
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <input type="password" id="confirm" placeholder="Konfirmasi Password" required />
+    <button type="submit">Daftar</button>
+    <div class="message" id="message"></div>
+  </form>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirm = document.getElementById("confirm").value;
+      const message = document.getElementById("message");
+
+      if (password !== confirm) {
+        message.textContent = "Password tidak cocok!";
+        message.style.color = "red";
+        return;
+      }
+
+      // Simpan data ke localStorage
+      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userPassword", password);
+
+      message.textContent = "Pendaftaran berhasil! Silakan login.";
+      message.style.color = "lightgreen";
+
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
